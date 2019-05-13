@@ -5,10 +5,10 @@ from pimouse_ros.msg import LightSensorValues
 if __name__ == '__main__':
     devfile = '/dev/rtlightsensor0'
     rospy.init_node('lightsensors')
-    pub = rospy.Publisher('lightsensor', LightSensorValues, queue_size=1)
+    pub = rospy.Publisher('lightsensors', LightSensorValues, queue_size=1)
 
     rate = rospy.Rate(10)
-    while not rospy.is_shutdown:
+    while not rospy.is_shutdown():
         try:
             with open(devfile,'r') as f:
                 data = f.readline().split()
