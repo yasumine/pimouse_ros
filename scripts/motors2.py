@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#encording: utf8
+#encoding: utf8
 import sys, rospy, math
 from pimouse_ros.msg import MotorFreqs
 from geometry_msgs.msg import Twist
@@ -54,7 +54,7 @@ class Motor():
 
     def onoff_response(self,onoff):
         d = TriggerResponse()
-        d.success = self.set_power(off)
+        d.success = self.set_power(onoff)
         d.message = "ON" if self.is_on else "OFF"
         return d
 
