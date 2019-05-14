@@ -18,7 +18,6 @@ def write_freq(hz=0):
 def recv_buzzer(data):
     write_freq(data.data)
 
-
 def exec_music(goal):
     r = MusicResult()
     fb = MusicFeedback()
@@ -40,7 +39,7 @@ def exec_music(goal):
     music.set_succeeded(r)
 
 
-if __name__ == 'main':
+if __name__ == '__main__':
     rospy.init_node('buzzer')
     rospy.Subscriber("buzzer", UInt16, recv_buzzer)
     music = actionlib.SimpleActionServer(
