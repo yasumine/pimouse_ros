@@ -1,11 +1,12 @@
 #!/bin/bash -xve
 
 #required packages
+sudo python -m pip uninstall pip setuptools
+sudo apt-get remove python3-pip
 pip install catkin_pkg
 pip install empy
 pip install pyyaml
 pip install rospkg
-pip install --upgrade pip
 
 #ros install
 cd ..
