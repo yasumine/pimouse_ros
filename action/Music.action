@@ -1,0 +1,6 @@
+uint16[] freq
+float32[] durations
+---
+bool finished
+---
+uint32 remaining_steps
