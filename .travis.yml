@@ -4,3 +4,4 @@ install:
   - bash -xve ./test/travis_ros_install.bash
 before_script:
     - "pip freeze"
+script: ""
