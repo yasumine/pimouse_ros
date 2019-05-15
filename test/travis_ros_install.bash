@@ -1,17 +1,20 @@
 #!/bin/bash -xve
 
+#add dummy files
+echo 1 2 3 4 | sudo tee /dev/rtlightsensor0
+echo 1 | sudo tee /dev/rtswitch{0,1,2}
+sudo touch /dev/rtmotor0 /dev/rtmotoren0 /dev/rtmotor_raw_{l,r}0 /dev/rtbuzzer0
+sudo chmod 666 /dev/rtmotor0 /dev/rtmotoren0 /dev/rtmotor_raw_{l,r}0 /dev/rtbuzzer0
+
 #required packages
-sudo python -m pip uninstall pip setuptools
-sudo apt-get remove python3-pip
 pip install catkin_pkg
 pip install empy
 pip install pyyaml
 pip install rospkg
 
 #ros install
-cd ..
-git clone https://github.com/ryuichiueda/ros_setup_scripts_Ubuntu16.04_server.git
-cd ./ros_setup_scripts_Ubuntu16.04_server
+git clone https://github.com/ryuichiueda/ros_setup_scripts_Ubuntu14.04_server.git
+cd ./ros_setup_scripts_Ubuntu14.04_server
 bash ./step0.bash
 bash ./step1.bash
 
