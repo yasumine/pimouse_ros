@@ -3,4 +3,3 @@ sudo: required
 dist: xenial
 install:
   - bash -xve ./test/travis_ros_install.bash
-  - source ~/catkin_ws/devel/setup.bash
