@@ -7,10 +7,10 @@ sudo touch /dev/rtmotor0 /dev/rtmotoren0 /dev/rtmotor_raw_{l,r}0 /dev/rtbuzzer0
 sudo chmod 666 /dev/rtmotor0 /dev/rtmotoren0 /dev/rtmotor_raw_{l,r}0 /dev/rtbuzzer0
 
 #required packages
-pip install catkin_pkg
-pip install empy
-pip install pyyaml
-pip install rospkg
+sudo pip install catkin_pkg
+sudo pip install empy
+sudo pip install pyyaml
+sudo pip install rospkg
 
 #ros install
 git clone https://github.com/ryuichiueda/ros_setup_scripts_Ubuntu14.04_server.git
